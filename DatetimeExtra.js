@@ -121,8 +121,6 @@ DatetimeExtra.prototype = {
 
         let d = new DatetimeExtra(toDate)
         if(false === d) return 0
-
-        //if( d.year < this.year ) return false
         
         return d.year - this.year
     },
@@ -140,15 +138,12 @@ DatetimeExtra.prototype = {
 
         let toNum = d.year + this.monthPercentOfYear( d.month )       
         let num = this.year + this.monthPercentOfYear( this.month ) 
-
-        //if( toNum < num ) return false
         
         return  Math.floor ( (toNum - num) * 12 ) 
     },
 
     monthPercentOfYear: function(month)
     {
-        //console.log("monthPercentOfYear" , month, Math.round( 100 * ( month / 12 ) ) / 100 )
         return Math.round( 100 * ( month / 12 ) ) / 100  
     },
     
@@ -241,7 +236,6 @@ DatetimeExtra.prototype = {
     {
         let d = new DatetimeExtra(date)
 
-        //console.log( this.year < d.year , this.year , d.year)
         if( this.year < d.year ||
             ( this.year == d.year && this.month < d.month) 
         ) return true
