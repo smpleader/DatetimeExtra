@@ -1,2 +1,3 @@
 # DatetimeExtra
-A library solve datetime in B.C and A.D
+
+A JS package solve datetime calculation relate to AD and BC time
